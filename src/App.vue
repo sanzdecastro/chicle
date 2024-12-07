@@ -47,8 +47,6 @@ export default {
       const text1 = document.querySelectorAll(".text1 div div")
       const introBack = document.querySelectorAll(".intro")
       const brand = document.querySelector(".brand")
-      const brand_chicleP = document.querySelector(".brand_chicle p")
-      const copyright = document.querySelector(".brand_chicle span")
       const brand_chicle = document.querySelector(".brand_chicle")
       const brand_studio = document.querySelector(".brand_studio")
       const header = document.querySelectorAll("header *")
@@ -157,14 +155,6 @@ export default {
           this.setSvgState('svg_garabato_2', false);
           this.setSvgState('svg_garabato_3', false);
         }
-      }, '<').to(brand_chicleP, {
-        fontSize: "30.5vw",
-        ease: "power4.out",
-      }, '<').to(copyright, {
-        fontSize: "3vw",
-        top: "1.3vw",
-        right: "17vw",
-        ease: "power4.out",
       }, '<').to(text1, {
         yPercent: 100,
         duration: 1,
