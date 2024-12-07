@@ -1,6 +1,6 @@
 // Importing utility functions from 'utils.js'
-import { getPointerPos, getMouseDistance, getNewPosition, lerp } from '../utils/utils.js';
-import { Image } from '../utils/image.js';
+import { getPointerPos, getMouseDistance, getNewPosition, lerp } from '@/utils/utils.js';
+import { Image } from '@/utils/image.js';
 import gsap from 'gsap';
 
 // Initial declaration of mouse position variables with default values
