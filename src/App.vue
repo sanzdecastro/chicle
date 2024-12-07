@@ -27,17 +27,20 @@ export default {
     svg_garabato_3
   },
   computed: {
-      ...mapState( useStore, ['intro', 'svgStates'])
+      ...mapState( useStore, ['intro', 'svgStates', 'images', 'loaded'])
+  },
+  created() {
+    this.fetchData();
   },
   mounted() {
     this.animateIntro()
   },
   methods: {
-    ...mapActions( useStore, ['setSvgState', 'setIntro']),
+    ...mapActions( useStore, ['setSvgState', 'setIntro', 'fetchData']),
 
     animateIntro(){
       const intro = gsap.timeline({});
-      console.log(this.svg_no)
+
       // Animate hate
 
       const text1C = document.querySelectorAll(".text1")
@@ -183,8 +186,8 @@ export default {
 </script>
 
 <template>
-  <header class="flex flex-row w-full justify-between uppercase text-center ">
-    <div class="header_text w-[13vw]">
+  <header class="flex z-50 flex-row w-[100vw] justify-between uppercase text-center ">
+    <div class="header_text md:w-[13vw]">
       <p class="text-left">Design</p>
       <p class="text-right indent-[4.3vw]">& thinking</p>
       <p>studio</p>
@@ -193,14 +196,14 @@ export default {
       <p>We hate <br>the obvious</p>
     </div>
     <nav>
-      <ul class="flex flex-row gap-[2vw] w-[13vw] justify-end">
+      <ul class="flex flex-row gap-[2vw] md:w-[13vw] justify-end">
         <li><a href="">IG</a></li>
         <li><a href="">MAIL</a></li>
       </ul>
     </nav>
   </header>
 
-  <image-trail-component v-if="!this.intro"></image-trail-component>
+  <image-trail-component v-if="loaded" :images="this.images" class="transition-all duration-150" :class="this.intro ? 'opacity-0' : 'opacity-100'" ></image-trail-component>
 
   <div class="intro">
     <div class="text1">

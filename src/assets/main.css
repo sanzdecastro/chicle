@@ -27,10 +27,14 @@
   }
 
   
-body {
+html, body {
   font-family: 'Founders';
   font-weight: 100;
+  width: 100vw;
   height: 100dvh;
   @apply
+  absolute
+  top-0
+  left-0
   overflow-hidden
 }

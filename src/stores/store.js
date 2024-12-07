@@ -5,35 +5,31 @@ import anime from 'animejs';
 export const useStore = defineStore('store', {
     state: () => ({
       intro: true,
-      svgStates: {}
-     
+      loaded: false,
+      svgStates: {},
+      images: []
     }),
     getters: {
     },
     actions: {
-        // async fetchData() {
-        //     try {
-        //         let response = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=KB69RUqjZ8gBYSrEzYC38njuPOL5JxHeKyOfgTHKXDKVHPHDQW2lKXB3b6-mYJSaN1pj2i57mkjt1FEL7Q-aPNIX9OIyPVtSm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnPBJTDxdTFGd_7xWdUp2pRcUMOkvhJras2m57cyH16Q7r33u9qjxKHtlvE9_oyKsOMyD4Btlz2tsuxptRjGWTtPLmBTVK5tbAtz9Jw9Md8uu&lib=MK7W_QqRaw6yysaSkdZIloXe3xnvQUYfV");
-        //         let data = await response.json();
-        //         console.log(data);
-        //         this.dataLorenzo = data['Lorenzo de Nicola'];
-        //         this.dataSanti = data['Santi Sánchez'];
-        //         this.dataPaula = data['Paula Grácia'];
-        //         this.dataDuna = data['Duna Vallés'];
-        //         this.autores =  data['Autorxs'];
+        async fetchData() {
+            try {
+                let response = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=9twcaEJf3S-ul_8A6aqE4ZYmxd6NSK0huAoKNw6uPDiBCX5Asi8oiEVqxLHKWtefY1U9iIeCbYaw1kmMWw6tKyuHq_ENEMNUm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAYaHezN6Hztce_sYVcfiBZ9Imyfq85sl3M396_M5SM1wMullZNm8-S2NN7k6spnv9-2jSqTPWlMKHtRAb8WIkbU69YuRbM8Vw&lib=MKb_74J-mqDSAmHmvozzKOofY3cMdV-Io");
+                let data = await response.json();
+                console.log(data);
+                this.images = data['Chicle'];
+
                
-        //       }
-        //       catch(error) {
-        //         console.log(error);
-        //       }
-        //       finally {
-        //         this.dataReel = [...this.dataLorenzo,...this.dataDuna,...this.dataSanti,...this.dataPaula],
-        //         this.dataReelRandom = this.dataReel.sort((a, b) => Math.random() - 0.5);
-        //         console.log("done")
-        //         // console.log(this.loading)
-        //         this.loading = false;
-        //       }
-        //   },
+              }
+              catch(error) {
+                console.log(error);
+              }
+              finally {
+                console.log(this.images)
+                this.loaded = true
+                console.log(this.loaded)
+              }
+          },
         drawSVG(svgElement, speed) {
           const chicleDrawing = anime({
               targets: svgElement.querySelectorAll('path'),
