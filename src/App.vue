@@ -222,8 +222,8 @@ export default {
   </div>
 
   <div class="brand flex flex-row items-end absolute bottom-0 w-full">
-    <div class="container-display brand_chicle flex w-full justify-center uppercase"><p class="display">Chicle <span>©</span></p></div>
-    <div class="container-display brand_studio flex w-full justify-center uppercase"><p class="display">Studio</p></div>
+    <div class="container-display brand_chicle flex w-full justify-center"><img src="./svg/logo_chicle.svg"></div>
+    <div class="container-display brand_studio flex w-full justify-center"><img src="./svg/logo_studio.svg"></div>
   </div>
 
   
@@ -267,6 +267,10 @@ header {
 }
 
 .brand {
+  @apply
+    px-[3vw]
+    py-[2vw]
+    md:p-[2vw];
   div {
     height:  clamp(20px, 11vw, 160px);
   }
