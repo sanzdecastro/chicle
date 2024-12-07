@@ -187,8 +187,8 @@ export default {
     </div>
     <nav>
       <ul class="flex flex-row gap-[2vw] md:w-[13vw] justify-end">
-        <li><a href="">IG</a></li>
-        <li><a href="">MAIL</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/marinaguadix/">IG</a></li>
+        <li><a target="_blank" href="mailto:marinaguadix@gmail.com">MAIL</a></li>
       </ul>
     </nav>
   </header>
