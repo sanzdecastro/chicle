@@ -269,7 +269,7 @@ header {
 .brand {
   @apply
     px-[3vw]
-    py-[2vw]
+    py-[3vw]
     md:p-[2vw];
   div {
     height:  clamp(20px, 11vw, 160px);
