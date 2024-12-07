@@ -18,7 +18,7 @@
   </template>
   
   <script>
-  import  ImageTrail  from '../classes/imageTrail.js';
+  import { ImageTrail }  from '../classes/ImageTrail.js';
   
   export default {
     name: 'ImageTrailComponent',
