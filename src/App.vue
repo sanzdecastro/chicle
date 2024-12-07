@@ -159,7 +159,7 @@ export default {
         yPercent: 100,
         duration: 1,
         ease: "power4.in",
-      }, '<-=.8>').to(introBack, {
+      }, '<-=1.5').to(introBack, {
         backgroundColor: "white",
         duration: 1,
         ease: "power4.inOut",
