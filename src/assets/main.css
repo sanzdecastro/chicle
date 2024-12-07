@@ -1,0 +1,36 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Founders';
+  src: url('fonts/FoundersGrotesk-Regular.woff2') format('woff2'),
+      url('fonts/FoundersGrotesk-Regular.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  font-optical-sizing: auto;
+
+}
+
+@font-face {
+    font-family: 'FoundersM';
+    src: url('fonts/FoundersGrotesk-Medium.woff2') format('woff2'),
+        url('fonts/FoundersGrotesk-Medium.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+    font-optical-sizing: auto;
+  
+  }
+
+  
+body {
+  font-family: 'Founders';
+  font-weight: 100;
+  height: 100dvh;
+  @apply
+  overflow-hidden
+}
