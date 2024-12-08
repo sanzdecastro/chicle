@@ -63,6 +63,11 @@ import { useStore } from '@/stores/store.js'
     height: 100dvh;
     width: 100vw;
     overflow: hidden;
+
+    img:first-of-type {
+      @apply
+      hidden;
+    }
   }
   .content__img {
     position: absolute;

@@ -143,6 +143,7 @@ export default {
         autoAlpha:0,
         overflow: "hidden",
         width: 0,
+        display: "none",
         ease: "power4.out",
       }).to(brand_chicle, {
         
@@ -305,10 +306,15 @@ header {
     svg {
       @apply
       pointer-events-none;
+      g {
+        
+      }
       path {
-        stroke-width: 50px;
-        @media (max-width: 1200px) {
-          stroke-width: 30px;
+        stroke-miterlimit: "0"!improtant; 
+        stroke-linecap: "round";
+        stroke-width: 60px;
+        @media (max-width: 700px) {
+          stroke-width: 70px;
         }
       }
     }
@@ -320,21 +326,26 @@ header {
     left-0;
   }
   .chicle {
-    top: 10vh;
+    bottom: calc(50vh - 5vw);
+    @media (max-width: 700px) {
+      bottom: calc(50vh - 45vw);
+    }
+  }
+
+  .pink_line {
+    top: calc(50vh + 5vw);
+    @apply
+    absolute
+    left-0;
+    @media (max-width: 700px) {
+      top: calc(50vh - 12vw);
+    }
   }
 
   .garabato {
     transform: scale(5);
    @apply
    md:scale-150;
-  }
-
-  .pink_line {
-    bottom: 20vh;
-    @apply
-    absolute
-    left-0;
-
   }
 
   .blur {
