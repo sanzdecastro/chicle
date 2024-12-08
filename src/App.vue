@@ -140,9 +140,11 @@ export default {
         duration: 1.3,
         ease: "power4.out",
       }).to(brand_studio, {
+        duration: .8,
         autoAlpha:0,
         overflow: "hidden",
         width: 0,
+        padding: "0px",
         display: "none",
         ease: "power4.out",
       }).to(brand_chicle, {
