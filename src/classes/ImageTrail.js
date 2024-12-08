@@ -122,8 +122,17 @@ export class ImageTrail {
         gsap.killTweensOf(img.DOM.el);
 
         // Random scale value
-        const scaleValue = gsap.utils.random(0.8, 1.3,);
+        let screenWidth = window.innerWidth;
+        let scaleValue;
+
+        if (screenWidth < 600) {
+            scaleValue = gsap.utils.random(0.4, 0.8,);
+        } else {
+            scaleValue = gsap.utils.random(0.8, 1.3,);
+        }
         
+        
+
         img.timeline = gsap.timeline({
             onStart: () => this.onImageActivated(),
             onComplete: () => this.onImageDeactivated(),
