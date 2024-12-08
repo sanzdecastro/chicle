@@ -178,16 +178,15 @@ export default {
 
 <template>
   <header class="flex z-50 flex-row w-[100vw] justify-between uppercase text-center ">
-    <div class="header_text md:w-[13vw]">
-      <p class="text-left">Design</p>
-      <p class="text-right indent-[4.3vw]">& thinking</p>
+    <div class="header_text ">
+      <p class="text-left flex">Design<span class="block pt-[2.7vh]">& thinking</span></p>
       <p>studio</p>
     </div>
     <div class="header_claim hidden md:block">
       <p>We hate <br>the obvious</p>
     </div>
     <nav>
-      <ul class="flex flex-row gap-[2vw] md:w-[13vw] justify-end">
+      <ul class="flex flex-row gap-[2vw] w-[12vw] justify-end">
         <li><a target="_blank" href="https://www.instagram.com/marinaguadix/">IG</a></li>
         <li><a target="_blank" href="mailto:marinaguadix@gmail.com">MAIL</a></li>
       </ul>
@@ -261,7 +260,8 @@ header {
   @apply
     px-[3vw]
     py-[3vw]
-    md:p-[2vw];
+    md:py-[1vw]
+    md:px-[2vw];
   div {
     height:  clamp(20px, 11vw, 160px);
   }
