@@ -208,8 +208,8 @@ export default {
   </div>
 
   <div class="brand flex flex-row items-end absolute bottom-0 w-full">
-    <div class="container-display brand_chicle flex w-full justify-center"><img src="./svg/logo_chicle.svg"></div>
-    <div class="container-display brand_studio flex w-full justify-center"><img src="./svg/logo_studio.svg"></div>
+    <div class="container-display pl-2 brand_chicle flex w-full justify-center"><img src="./svg/logo_chicle.svg"></div>
+    <div class="container-display p-0 brand_studio flex w-full justify-center"><img src="./svg/logo_studio.svg"></div>
   </div>
 
   
