@@ -132,14 +132,12 @@ export default {
         duration: 0,
         color: '#FF92F0',
       }).to(text1C, {
-        duration: 0,
-        zIndex: '10',
-      }, '-=2').to(brand, {
-        delay: .4,
+        autoAlpha:0,
+      }, '<').to(brand, {
         yPercent: 0,
         duration: 1.3,
         ease: "power4.out",
-      }).to(brand_studio, {
+      }, '-=1').to(brand_studio, {
         duration: .8,
         autoAlpha:0,
         overflow: "hidden",
@@ -158,11 +156,7 @@ export default {
           this.setSvgState('svg_garabato_2', false);
           this.setSvgState('svg_garabato_3', false);
         }
-      }, '<').to(text1, {
-        yPercent: 100,
-        duration: 1,
-        ease: "power4.in",
-      }, '<-=1.5').to(introBack, {
+      }, '-=.75').to(introBack, {
         backgroundColor: "white",
         duration: 1,
         ease: "power4.inOut",
@@ -181,7 +175,7 @@ export default {
 <template>
   <header class="flex z-50 flex-row w-[100vw] justify-between uppercase text-center ">
     <div class="header_text ">
-      <p class="text-left flex">Design<span class="block pt-[2.7vh]">& thinking</span></p>
+      <p class="text-left flex">Design<span class="block pt-[2.9vh]">& thinking</span></p>
       <p>studio</p>
     </div>
     <div class="header_claim hidden md:block">
@@ -189,8 +183,8 @@ export default {
     </div>
     <nav>
       <ul class="flex flex-row gap-[2vw] w-[12vw] justify-end">
-        <li><a target="_blank" href="https://www.instagram.com/marinaguadix/">IG</a></li>
-        <li><a target="_blank" href="mailto:marinaguadix@gmail.com">MAIL</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/chicle.lab/">IG</a></li>
+        <li><a target="_blank" href="mailto:labchicle@gmail.com">MAIL</a></li>
       </ul>
     </nav>
   </header>
@@ -260,8 +254,8 @@ header {
 
 .brand {
   @apply
-    px-[3vw]
-    py-[3vw]
+    px-[.5vw]
+    py-[2vw]
     md:py-[1vw]
     md:px-[2vw];
   div {
