@@ -29,7 +29,7 @@ export class ImageTrail {
     DOM = {el: null}; // Object to hold DOM elements
     images = []; // Array to store Image objects
     imagesTotal = 0; // Variable to store total number of images
-    imgPosition = 0; // Variable to store the position of the upcoming image
+    imgPosition = -1; // Variable to store the position of the upcoming image
     zIndexVal = 1; // z-index value for the upcoming image
     activeImagesCount = 0; // Counter for active images
     isIdle = true; // Flag to check if all images are inactive
