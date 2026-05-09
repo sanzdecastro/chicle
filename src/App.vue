@@ -302,12 +302,10 @@ header {
     svg {
       @apply
       pointer-events-none;
-      g {
-        
-      }
       path {
-        stroke-miterlimit: "0"!improtant; 
-        stroke-linecap: "round";
+        stroke-miterlimit: 0 !important;
+        stroke-linecap: round;
+        stroke-linejoin: round;
         stroke-width: 60px;
         @media (max-width: 700px) {
           stroke-width: 70px;
